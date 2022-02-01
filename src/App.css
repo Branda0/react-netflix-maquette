@@ -19,7 +19,6 @@
   display: flex;
   overflow: hidden;
   overflow-x: scroll;
-  height: 150px;
 }
 
 .list-container::-webkit-scrollbar {
@@ -27,7 +26,7 @@
 }
 
 .movie-image {
-  width: 220px;
+  height: 150px;
   object-fit: cover;
 }
 
