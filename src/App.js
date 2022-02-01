@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import data from "./assets/data/movies_rnexgr.json";
+import Section from "./components/Section";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <img
+        className="logo"
+        src="https://lereacteur-react-netflix.netlify.app/static/media/logo.696c2101.png"
+        alt="logo"
+      />
+      {data.map((section, index) => {
+        return <Section key={index} category={section.category} images={section.images} />;
+      })}
+      ;
     </div>
   );
 }
